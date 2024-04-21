@@ -1,42 +1,28 @@
-import React from 'react';
-import pizza from './images/pizza.jpg';
-import { Router } from 'react-router-dom';
-import { createMemoryHistory } from 'history'; // Import createMemoryHistory
+// import React from 'react';
 
-// function Home() {
-//   // Create a memory history object
-//   const history = createMemoryHistory();
-
+// const Home = () => {
 //   return (
 //     <div>
-//       <h2>
-//         Welcome to Bloom Pizza!
-//       </h2>
-//       {/* Render the component with the Router using the created history object */}
-//       <Router history={history}>
-//         <Link to="/order">
-//           <img alt="order-pizza" style={{ cursor: 'pointer' }} src={pizza} />
-//         </Link>
-//       </Router>
+//       <h2>Welcome to our Pizza Ordering App!</h2>
+//       <p>
+//         Here you can order delicious pizzas with your favorite toppings.
+//         Get started by selecting your pizza size and toppings!
+//       </p>
 //     </div>
 //   );
-// }
+// };
 
 // export default Home;
 
-// import React from 'react';
-// import pizza from './images/pizza.jpg';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-function Home() {
+const Home = () => {
   return (
     <div>
-      <h2>
-        Welcome to Bloom Pizza!
-      </h2>
-      <Link to="/order">
-        <img alt="order-pizza" style={{ cursor: 'pointer' }} src={pizza} />
-      </Link>
+      <h2>Welcome to Home</h2>
+      <p>This is the Home page.</p>
     </div>
   );
-}
+};
+
+export default Home;
