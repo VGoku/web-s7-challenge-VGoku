@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutPage = () => {
+const Order = () => {
   return (
     <div>
       <h2>About Us</h2>
@@ -9,4 +9,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default Order;
