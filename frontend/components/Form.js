@@ -159,7 +159,7 @@ import axios from 'axios'; // Import Axios for HTTP requests
 
 const Form = () => {
   const [formState, setFormState] = useState({
-    name: '',
+    fullName: '',
     size: '',
     toppings: [],
   });
@@ -181,14 +181,16 @@ const Form = () => {
 
     try {
       // Send form data to the server (replace with your actual API endpoint)
-      const response = await axios.post('http://localhost:9009/api/order', formState);
+        axios.post('http://localhost:9009/api/order', formState).then((response)=>{
+        console.log(response);
+      })
 
       // Handle the response (e.g., show success message)
-      console.log('Order submitted successfully:', response.data);
+     
 
       // Clear the form fields
       setFormState({
-        name: '',
+        fullName: '',
         size: '',
         toppings: [],
       });
@@ -207,8 +209,8 @@ const Form = () => {
         Full Name:
         <input
           type="text"
-          name="name"
-          value={formState.name}
+          name="fullName"
+          value={formState.fullName}
           onChange={handleChange}
         />
       </label>
@@ -227,7 +229,7 @@ const Form = () => {
           <input
             type="checkbox"
             name="toppings"
-            value="Pepperoni"
+            value= {1}
             onChange={handleChange}
           />
           Pepperoni
